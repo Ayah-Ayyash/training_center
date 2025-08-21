@@ -1,0 +1,111 @@
+/* GENERAL */
+body {
+  font-family: 'Tajawal', sans-serif;
+  margin:0; padding:0;
+  background:#f2f2f5; color:#fff;
+}
+a { text-decoration:none; }
+ul { list-style:none; margin:0; padding:0; }
+
+/* NAVBAR */
+.navbar {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 60px; background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  position: sticky; top:0; z-index:999;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+.navbar .logo { font-size:28px; font-weight:700; color:#d4af37; letter-spacing:1px; }
+.navbar ul { display:flex; gap:30px; }
+.navbar a { color:white; font-weight:600; transition:0.3s; position:relative; }
+.navbar a::after {
+  content:""; position:absolute; width:0; height:2px; background:#d4af37; left:0; bottom:-5px; transition:0.3s;
+}
+.navbar a:hover::after { width:100%; }
+
+/* HERO */
+.hero {
+  height:90vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+  text-align:center;
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  color:white;
+}
+.hero h1 {
+  font-family:'Cairo', sans-serif; font-size:3.5rem; margin-bottom:20px;
+  letter-spacing:2px; color:#d4af37;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.hero p { font-size:1.4rem; margin-bottom:30px; color:#e0e0e0; }
+.hero .btn {
+  padding:14px 35px; background:#d4af37; color:#1b263b; border-radius:10px; font-weight:bold;
+  transition:0.4s; box-shadow:0 8px 20px rgba(212,175,55,0.5);
+}
+.hero .btn:hover { transform:scale(1.05); box-shadow:0 12px 25px rgba(212,175,55,0.6); }
+
+/* SECTIONS */
+section { padding:100px 50px; }
+section h2 {
+  text-align:center; font-size:2.5rem; margin-bottom:60px;
+  color:#d4af37; font-family:'Cairo', sans-serif;
+  text-shadow:1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* CARDS */
+.cards {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:35px;
+}
+.card {
+  background: linear-gradient(135deg,#1b1f3b,#3b1f2a);
+  padding:30px; border-radius:20px; flex:1 1 300px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.4); text-align:center;
+  transition:0.4s;
+}
+.card:hover {
+  transform:translateY(-15px) scale(1.02);
+  box-shadow:0 20px 40px rgba(212,175,55,0.5);
+}
+.card i { font-size:3.5rem; margin-bottom:15px; color:#d4af37; }
+
+/* FORM */
+form { max-width:650px; margin:auto; display:flex; flex-direction:column; gap:20px; }
+input, textarea { padding:15px; border-radius:10px; border:1px solid #ccc; font-size:1.1rem; }
+button.btn { background:#d4af37; color:#1b263b; font-weight:bold; border:none; padding:15px; border-radius:10px; cursor:pointer; transition:0.4s; box-shadow:0 5px 15px rgba(212,175,55,0.4); }
+button.btn:hover { transform:scale(1.05); box-shadow:0 10px 20px rgba(212,175,55,0.6); }
+
+/* FOOTER */
+footer { background:#0d1b2a; color:white; text-align:center; padding:30px; margin-top:60px; box-shadow:0 -5px 15px rgba(0,0,0,0.3); }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .navbar { flex-direction:column; gap:20px; padding:20px; }
+  .cards { flex-direction:column; gap:25px; }
+  .hero h1 { font-size:2.5rem; }
+}
+.about {
+  background: linear-gradient(135deg, #1b1f3b, #3b1f2a);
+  padding: 80px 20px;
+}
+
+.about .container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Cairo', sans-serif;
+  font-size: 2.8rem;
+  color: #d4af37;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.about p {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+.navbar a.active {
+  color:#d4af37;
+}
+
