@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 if(!isset($_SESSION['admin_logged_in'])) header("Location: login.php");
@@ -45,7 +46,7 @@ $courses = $conn->query("SELECT * FROM courses");
       <th>الإجراء</th>
     </tr>
     <?php while($row = $courses->fetch_assoc()){ ?>
-      <tr>
+      <tr >
         <td><?= $row['title'] ?></td>
         <td><?= $row['duration'] ?></td>
         <td><?= $row['trainer'] ?></td>
