@@ -3,13 +3,11 @@ session_start();
 if(!isset($_SESSION['admin_logged_in'])) header("Location: login.php");
 include("../includes/db.php");
 
-// حذف رسالة
 if(isset($_GET['delete'])){
     $id = $_GET['delete'];
     $conn->query("DELETE FROM messages WHERE id=$id");
 }
 
-// جلب كل الرسائل
 $messages = $conn->query("SELECT * FROM messages ORDER BY created_at DESC");
 ?>
 

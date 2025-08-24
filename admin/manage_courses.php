@@ -3,7 +3,6 @@ session_start();
 if(!isset($_SESSION['admin_logged_in'])) header("Location: login.php");
 include("../includes/db.php");
 
-// إضافة دورة جديدة
 if(isset($_POST['add_course'])){
     $title = $_POST['title'];
     $description = $_POST['description'];
@@ -15,13 +14,11 @@ if(isset($_POST['add_course'])){
     $stmt->execute();
 }
 
-// حذف دورة
 if(isset($_GET['delete'])){
     $id = $_GET['delete'];
     $conn->query("DELETE FROM courses WHERE id=$id");
 }
 
-// جلب كل الدورات
 $courses = $conn->query("SELECT * FROM courses");
 ?>
 

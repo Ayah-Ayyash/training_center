@@ -3,7 +3,6 @@ session_start();
 if(!isset($_SESSION['admin_logged_in'])) header("Location: login.php");
 include("../includes/db.php");
 
-// إضافة مدرب جديد
 if(isset($_POST['add_trainer'])){
     $name = $_POST['name'];
     $specialty = $_POST['specialty'];
@@ -13,13 +12,11 @@ if(isset($_POST['add_trainer'])){
     $stmt->execute();
 }
 
-// حذف مدرب
 if(isset($_GET['delete'])){
     $id = $_GET['delete'];
     $conn->query("DELETE FROM trainers WHERE id=$id");
 }
 
-// جلب كل المدربين
 $trainers = $conn->query("SELECT * FROM trainers");
 ?>
 
